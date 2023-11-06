@@ -9,7 +9,7 @@
   --spacing-two: calc(1rem * 0.5);
   --spacing-three: 1rem;
   --spacing-four: calc(1rem * 1.5);
-  --spacing-five: calc(1rem * 3);
+  --spacing-five: calc(1rem * 5);
 }
 
 * {
@@ -77,11 +77,13 @@ a {
 header {
   position: sticky;
   top: 0;
+  padding: 20px;
+  background-color: var(--light);
 }
 
 nav {
   width: 100%;
-  margin-top: 10px;
+  margin-top: 20px;
   justify-content: center;
 }
 
@@ -124,7 +126,7 @@ nav a:hover {
   border: none;
   box-shadow: 0 0 20px #582eff;
   border-radius: var(--border-radius);
-  padding: 25px;
+  padding: 40px;
   background-color: var(--light);
 }
 
@@ -138,6 +140,14 @@ nav a:hover {
   padding: 2.5%;
 }
 
+/* SECTIONS */
+.about {
+  background-color: var(--dark);
+}
+
+.team {
+  background-color: var(--tertiary);
+}
 /* FORM */
 @keyframes input-focus {
   0% {
@@ -905,6 +915,13 @@ nav a:hover {
   flex: 0 0 100%;
 }
 
+/* HERO */
+#hero {
+  background-image: url(./assets/images/pexels-digital-50.png);
+  background-position: center;
+  background-size: cover;
+}
+
 /* col-sm */
 @media screen and (min-width: 640px) {
   .col-sm-1 {
@@ -1118,13 +1135,13 @@ nav a:hover {
   }
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   .card,
   .form-label {
     background-color: var(--dark);
     color: var(--light);
   }
-}
+} */
 
 @media (prefers-color-scheme: light) {
   .card {

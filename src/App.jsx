@@ -10,7 +10,11 @@ function App() {
 
   const [currentSection, setCurrentSection] = useState(initialSection);
   useEffect(() => {
-    document.title = `Bubs App | ${currentSection}`;
+    if (currentSection === "") {
+      document.title = "Bubs App";
+    } else {
+      document.title = `Bubs App | ${currentSection}`;
+    }
   });
   return (
     <>
