@@ -1,7 +1,20 @@
 import DownloadBtn from "../components/DownloadBtn";
-import TeamCard from "../components/TeamCard";
+import emp1 from "../assets/images/emp-1.svg";
+import emp2 from "../assets/images/emp-2.svg";
+import emp3 from "../assets/images/emp-3.svg";
+import emp4 from "../assets/images/emp-4.svg";
 
 const Home = () => {
+  // window.addEventListener(
+  //   "scroll",
+  //   () => {
+  //     document.body.style.setProperty(
+  //       "--scroll",
+  //       window.pageYOffset / (document.body.offsetHeight - window.innerHeight)
+  //     );
+  //   },
+  //   false
+  // );
   return (
     <>
       <section id="hero" className="py-5">
@@ -46,7 +59,10 @@ const Home = () => {
           <h1 className="page-title text-light">Meet The Team</h1>
         </div>
         <div className="flex-row justify-space-around py-5">
-          <TeamCard />
+          <img src={emp1} alt="avatar of employee" />
+          <img src={emp2} alt="avatar of employee" />
+          <img src={emp3} alt="avatar of employee" />
+          <img src={emp4} alt="avatar of employee" />
         </div>
       </section>
     </>
