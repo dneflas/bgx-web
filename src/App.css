@@ -18,7 +18,6 @@
 
 body {
   background-color: var(--light);
-  background-image: url(./images/pexels-digital-buggu-171198.jpg);
   background-position: center;
   background-size: cover;
   margin: 0;
@@ -76,7 +75,6 @@ a {
 }
 
 header {
-  background-color: var(--primary);
   position: sticky;
   top: 0;
 }
