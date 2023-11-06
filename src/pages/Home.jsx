@@ -1,5 +1,5 @@
 import DownloadBtn from "../components/DownloadBtn";
-import TeamCard from "../components/teamCard";
+import TeamCard from "../components/TeamCard";
 
 const Home = () => {
   return (

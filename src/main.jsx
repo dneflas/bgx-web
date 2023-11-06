@@ -6,7 +6,7 @@ import App from "./App.jsx";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/bgx-web/",
     element: <App />,
   },
 ]);
