@@ -1,4 +1,5 @@
 import DownloadBtn from "../components/DownloadBtn";
+import TeamCard from "../components/teamCard";
 
 const Home = () => {
   return (
@@ -40,9 +41,12 @@ const Home = () => {
           </p>
         </div>
       </section>
-      <section className="team py-5 text-light">
+      <section className="team py-5 ">
         <div className="text-center mx-5 px-5">
-          <h1 className="page-title">Meet The Team</h1>
+          <h1 className="page-title text-light">Meet The Team</h1>
+        </div>
+        <div className="flex-row justify-space-around py-5">
+          <TeamCard />
         </div>
       </section>
     </>

@@ -123,8 +123,8 @@ nav a:hover {
 
 /* CARDS */
 .card {
-  border: none;
-  box-shadow: 0 0 20px #582eff;
+  /* border: 3px solid red; */
+  box-shadow: 0 0 20px red;
   border-radius: var(--border-radius);
   padding: 40px;
   background-color: var(--light);
