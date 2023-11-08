@@ -103,6 +103,9 @@ const Home = () => {
           <img src={emp3} className="emp-avatar" alt="avatar of employee" />
           <img src={emp4} className="emp-avatar" alt="avatar of employee" />
         </div>
+        <div className="flex-row justify-center">
+          <button className="btn-light">learn more</button>
+        </div>
       </section>
     </>
   );

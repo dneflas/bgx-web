@@ -112,6 +112,19 @@ nav a:hover {
   outline: none;
   background-color: var(--tertiary);
 }
+.btn-light {
+  font-size: 1rem;
+  font-family: "Urbanist", sans-serif;
+  text-decoration: none;
+  font-weight: 900;
+  padding: 1rem 2.5rem;
+  margin: 5px 0;
+  border-radius: 40px;
+  border: none;
+  color: var(--dark);
+  outline: none;
+  background-color: var(--light);
+}
 
 .btn:hover {
   background-color: #6d49ff;
