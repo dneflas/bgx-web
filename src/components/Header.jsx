@@ -1,4 +1,4 @@
-import logo from "../assets/images/bgx-logo.png";
+import logo from "../assets/images/bubs-logo.png";
 import Navbar from "./Navbar";
 import DownloadBtn from "./DownloadBtn";
 
