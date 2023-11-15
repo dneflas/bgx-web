@@ -88,8 +88,7 @@ nav {
 }
 
 nav a:hover {
-  color: var(--secondary);
-  background-color: var(--dark);
+  border-bottom: 4px solid var(--secondary);
 }
 
 .page-title {
