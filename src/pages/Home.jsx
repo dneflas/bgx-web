@@ -93,7 +93,9 @@ const Home = () => {
             </p>
           </div>
           <div>
-            <button className="btn">learn more</button>
+            <Link to="/bgx-web/about">
+              <button className="btn">learn more</button>
+            </Link>
           </div>
         </div>
       </section>
@@ -108,7 +110,9 @@ const Home = () => {
           <img src={emp4} className="emp-avatar" alt="avatar of employee" />
         </div>
         <div className="flex-row justify-center">
-          <button className="btn-secondary">learn more</button>
+          <Link to="/bgx-web/team">
+            <button className="btn-secondary">learn more</button>
+          </Link>
         </div>
       </section>
     </>

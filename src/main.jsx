@@ -5,6 +5,7 @@ import App from "./App.jsx";
 import About from "./pages/About.jsx";
 import Team from "./pages/Team.jsx";
 import Home from "./pages/Home.jsx";
+import DownloadPage from "./pages/DownloadPage.jsx";
 import ErrorPage from "./pages/ErrorPage.jsx";
 
 // import "./index.css";
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: "/bgx-web/team",
         element: <Team />,
+      },
+      {
+        path: "/bgx-web/download",
+        element: <DownloadPage />,
       },
     ],
   },
