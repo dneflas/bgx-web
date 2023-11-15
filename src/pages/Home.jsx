@@ -1,4 +1,5 @@
 import DownloadBtn from "../components/DownloadBtn";
+import logoIcon from "../assets/images/logo.png";
 import emp1 from "../assets/images/emp-1.svg";
 import emp2 from "../assets/images/emp-2.svg";
 import emp3 from "../assets/images/emp-3.svg";
@@ -20,8 +21,11 @@ const Home = () => {
   );
   return (
     <>
-      <section id="hero" className="py-5">
+      <section id="hero" className="">
         <div className="">
+          <div className="flex-row justify-center">
+            <img src={logoIcon} alt="Red outline of box with gear inside" />
+          </div>
           <h1 className="page-title">Built by parents, for parents.</h1>
           <p className="text-center mx-5 px-5">
             I'm baby palo santo selfies narwhal, banh mi coloring book
@@ -89,7 +93,9 @@ const Home = () => {
             </p>
           </div>
           <div>
-            <button className="btn">learn more</button>
+            <Link to="/bgx-web/about">
+              <button className="btn">learn more</button>
+            </Link>
           </div>
         </div>
       </section>
@@ -102,6 +108,11 @@ const Home = () => {
           <img src={emp2} className="emp-avatar" alt="avatar of employee" />
           <img src={emp3} className="emp-avatar" alt="avatar of employee" />
           <img src={emp4} className="emp-avatar" alt="avatar of employee" />
+        </div>
+        <div className="flex-row justify-center">
+          <Link to="/bgx-web/team">
+            <button className="btn-secondary">learn more</button>
+          </Link>
         </div>
       </section>
     </>

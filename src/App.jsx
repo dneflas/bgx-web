@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-import Home from "./pages/Home";
+import { Outlet } from "react-router-dom";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import "./App.css";
 
 function App() {
@@ -22,7 +23,8 @@ function App() {
         currentSection={currentSection}
         setCurrentSection={setCurrentSection}
       />
-      <Home />
+      <Outlet />
+      <Footer />
     </>
   );
 }

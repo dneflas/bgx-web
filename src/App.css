@@ -1,6 +1,6 @@
 :root {
   --primary: #c7e1fa;
-  --secondary: #daeaef;
+  --secondary: #fc4b69;
   --tertiary: #582eff;
   --light: #ffffff;
   --dark: #272f32;
@@ -83,13 +83,12 @@ header {
 
 nav {
   width: 100%;
-  margin-top: 20px;
+  margin-top: 28px;
   justify-content: center;
 }
 
 nav a:hover {
-  color: var(--secondary);
-  background-color: var(--dark);
+  border-bottom: 4px solid var(--secondary);
 }
 
 .page-title {
@@ -112,9 +111,26 @@ nav a:hover {
   outline: none;
   background-color: var(--tertiary);
 }
+.btn-secondary {
+  font-size: 1rem;
+  font-family: "Urbanist", sans-serif;
+  text-decoration: none;
+  font-weight: 900;
+  padding: 1rem 2.5rem;
+  margin: 5px 0;
+  border-radius: 40px;
+  border: none;
+  color: var(--light);
+  outline: none;
+  background-color: var(--secondary);
+}
 
 .btn:hover {
   background-color: #6d49ff;
+}
+
+.btn-secondary:hover {
+  background-color: #ff6b84;
 }
 
 .btn-inline {
@@ -124,7 +140,7 @@ nav a:hover {
 /* CARDS */
 .card {
   /* border: 3px solid red; */
-  box-shadow: 0 0 20px red;
+  box-shadow: 0 0 20px var(--secondary);
   border-radius: var(--border-radius);
   padding: 40px;
   background-color: var(--light);
@@ -920,7 +936,7 @@ nav a:hover {
   background-image: url(./assets/images/pexels-digital-50.png);
   background-position: center;
   background-size: cover;
-  padding-top: 200px;
+  padding-top: 100px;
   padding-bottom: 200px;
 }
 
