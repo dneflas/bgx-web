@@ -20,18 +20,18 @@ const router = createBrowserRouter([
         path: "/bgx-web/",
         element: <Home />,
       },
-      {
-        path: "/bgx-web/about",
-        element: <About />,
-      },
-      {
-        path: "/bgx-web/team",
-        element: <Team />,
-      },
-      {
-        path: "/bgx-web/download",
-        element: <DownloadPage />,
-      },
+      // {
+      //   path: "/bgx-web/about",
+      //   element: <About />,
+      // },
+      // {
+      //   path: "/bgx-web/team",
+      //   element: <Team />,
+      // },
+      // {
+      //   path: "/bgx-web/download",
+      //   element: <DownloadPage />,
+      // },
     ],
   },
 ]);

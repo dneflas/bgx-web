@@ -4,7 +4,7 @@ import emp1 from "../assets/images/emp-1.svg";
 import emp2 from "../assets/images/emp-2.svg";
 import emp3 from "../assets/images/emp-3.svg";
 import emp4 from "../assets/images/emp-4.svg";
-import phoneMockup from "../assets/images/iphone-mockup.png";
+import phoneMockup from "../assets/images/iphone-mockup-logo.png";
 import onlineSelling from "../assets/images/online-selling.png";
 import { Link } from "react-router-dom";
 
@@ -92,11 +92,6 @@ const Home = () => {
               pop-up hella etsy literally 8-bit leggings kitsch whatever.
             </p>
           </div>
-          <div>
-            <Link to="/bgx-web/about">
-              <button className="btn">learn more</button>
-            </Link>
-          </div>
         </div>
       </section>
       <section id="team" className="team py-5 ">
@@ -108,11 +103,6 @@ const Home = () => {
           <img src={emp2} className="emp-avatar" alt="avatar of employee" />
           <img src={emp3} className="emp-avatar" alt="avatar of employee" />
           <img src={emp4} className="emp-avatar" alt="avatar of employee" />
-        </div>
-        <div className="flex-row justify-center">
-          <Link to="/bgx-web/team">
-            <button className="btn-secondary">learn more</button>
-          </Link>
         </div>
       </section>
     </>
