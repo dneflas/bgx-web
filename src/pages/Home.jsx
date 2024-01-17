@@ -40,7 +40,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="about py-5 text-light">
+      <section id="about" className="about py-5 text-light">
         <div className="text-center mx-5 px-5">
           <h1 className="page-title">About Bubs</h1>
 
@@ -99,7 +99,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="team py-5 ">
+      <section id="team" className="team py-5 ">
         <div className="text-center mx-5 px-5">
           <h1 className="page-title text-light">Meet The Team</h1>
         </div>
