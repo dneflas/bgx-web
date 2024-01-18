@@ -937,11 +937,9 @@ nav a:hover {
 
 /* HERO */
 #hero {
-  background-image: url(./assets/images/pexels-digital-50.png);
-  background-position: center;
-  background-size: cover;
+  background-color: var(--dark);
   padding-top: 100px;
-  padding-bottom: 200px;
+  padding-bottom: 100px;
 }
 
 /* col-sm */
