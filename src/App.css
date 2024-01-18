@@ -1203,7 +1203,7 @@ nav a:hover {
   transform: scale(1.1);
 }
 
-@keyframes slideInFromLeft {
+/* @keyframes slideInFromLeft {
   0% {
     transform: translateX(-300%);
   }
@@ -1214,4 +1214,4 @@ nav a:hover {
 
 #hero-logo {
   animation: slideInFromLeft 2s ease-in-out;
-}
+} */

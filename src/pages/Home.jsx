@@ -24,11 +24,7 @@ const Home = () => {
       <section id="hero" className="">
         <div className="text-light mx-5 pr-5">
           <div className="flex-row justify-flex-end">
-            <img
-              id="hero-logo"
-              src={logoIcon}
-              alt="Red outline of box with gear inside"
-            />
+            <img src={logoIcon} alt="Red outline of box with gear inside" />
           </div>
           <h1 className="page-title text-right">
             Built by parents, for parents.
