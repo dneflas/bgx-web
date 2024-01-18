@@ -22,12 +22,14 @@ const Home = () => {
   return (
     <>
       <section id="hero" className="">
-        <div className="">
-          <div className="flex-row justify-center">
+        <div className="text-light mx-5 pr-5">
+          <div className="flex-row justify-flex-end">
             <img src={logoIcon} alt="Red outline of box with gear inside" />
           </div>
-          <h1 className="page-title">Built by parents, for parents.</h1>
-          <p className="text-center mx-5 px-5">
+          <h1 className="page-title text-right">
+            Built by parents, for parents.
+          </h1>
+          <p className="text-right">
             I'm baby palo santo selfies narwhal, banh mi coloring book
             williamsburg art party blackbird spyplane hoodie single-origin
             coffee messenger bag hella post-ironic glossier. Bruh artisan
@@ -35,7 +37,7 @@ const Home = () => {
             ennui tacos deep v pabst crucifix, schlitz wolf selfies fixie
             microdosing cold-pressed try-hard.
           </p>
-          <div className="text-center">
+          <div className="text-right mr-5">
             <DownloadBtn className="my-auto" />
           </div>
         </div>
