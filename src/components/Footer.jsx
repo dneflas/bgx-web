@@ -21,8 +21,8 @@ const Footer = () => {
   return (
     <footer className="flex-row justify-center py-2 ">
       {socialIcons.map((social) => (
-        <a href={social.link} key={social.link} className="px-2">
-          <img src={social.icon} alt={social.alt} width="50px" />
+        <a href={social.link} key={social.link} className="mx-2">
+          <img src={social.icon} alt={social.alt} width="30px" />
         </a>
       ))}
     </footer>

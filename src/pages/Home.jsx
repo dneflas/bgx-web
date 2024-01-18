@@ -115,9 +115,9 @@ const Home = () => {
         </div>
         <form className="form">
           <div class="form-entry">
-            <label class="form-label " name="name">
+            {/* <label class="form-label " name="name">
               Name
-            </label>
+            </label> */}
             <input
               type="text"
               placeholder="Name"
@@ -126,9 +126,9 @@ const Home = () => {
             />
           </div>
           <div class="form-entry">
-            <label class="form-label " name="email">
+            {/* <label class="form-label " name="email">
               Email Address
-            </label>
+            </label> */}
             <input
               type="text"
               placeholder="Email Address"
@@ -140,7 +140,7 @@ const Home = () => {
             <p class="display-none" id="error-message">
               An unexpected error occurred
             </p>
-            <button type="submit" class="btn">
+            <button type="submit" className="btn">
               Submit
             </button>
           </div>

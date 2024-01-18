@@ -93,6 +93,9 @@ nav a:hover {
   border-bottom: 4px solid var(--secondary);
 }
 
+footer a:hover {
+}
+
 .page-title {
   text-align: center;
   width: 100%;
@@ -184,7 +187,7 @@ nav a:hover {
   }
 }
 
-/* .form-label,
+.form-label,
 .form-input,
 .form-textarea {
   display: block;
@@ -201,7 +204,6 @@ nav a:hover {
   position: absolute;
   bottom: 60px;
   left: 15px;
-
 }
 
 .form-input {
@@ -227,7 +229,7 @@ nav a:hover {
   margin: 10px 0;
   font-size: 14px;
   font-family: "Urbanist", sans-serif;
-} */
+}
 
 /* MODAL */
 .modal {
