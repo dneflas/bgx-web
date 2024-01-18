@@ -93,9 +93,6 @@ nav a:hover {
   border-bottom: 4px solid var(--secondary);
 }
 
-footer a:hover {
-}
-
 .page-title {
   text-align: center;
   width: 100%;

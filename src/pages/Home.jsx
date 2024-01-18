@@ -113,7 +113,7 @@ const Home = () => {
             updates and exclusive access to our innovative platform.
           </p>
         </div>
-        <form className="form">
+        <form className="form justify-center">
           <div class="form-entry">
             {/* <label class="form-label " name="name">
               Name
@@ -136,7 +136,7 @@ const Home = () => {
               name="email"
             />
           </div>
-          <div class="flex-row justify-flex-end" id="error-message-display">
+          <div class="flex-row justify-center" id="error-message-display">
             <p class="display-none" id="error-message">
               An unexpected error occurred
             </p>
