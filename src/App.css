@@ -165,6 +165,10 @@ nav a:hover {
 .team {
   background-color: var(--tertiary);
 }
+
+.signup {
+  background-color: var(--secondary);
+}
 /* FORM */
 @keyframes input-focus {
   0% {

@@ -105,6 +105,13 @@ const Home = () => {
           <img src={emp4} className="emp-avatar" alt="avatar of employee" />
         </div>
       </section>
+      <section id="signup" className="signup py-5">
+        <form>
+          <div className="text-center mx-5 px-5">
+            <h1 className="page-title text-light">Sign Up</h1>
+          </div>
+        </form>
+      </section>
     </>
   );
 };
