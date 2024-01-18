@@ -14,6 +14,7 @@
 
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -79,6 +80,7 @@ header {
   top: 0;
   padding: 20px;
   background-color: var(--light);
+  z-index: 1000;
 }
 
 nav {
@@ -164,6 +166,10 @@ nav a:hover {
 .team {
   background-color: var(--tertiary);
 }
+
+.signup {
+  background-color: var(--secondary);
+}
 /* FORM */
 @keyframes input-focus {
   0% {
@@ -195,8 +201,6 @@ nav a:hover {
   position: absolute;
   bottom: 60px;
   left: 15px;
-  /* animation-name: input-focus;
-  animation-duration: 0.5s; */
 }
 
 .form-input {

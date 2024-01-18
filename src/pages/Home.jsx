@@ -4,7 +4,7 @@ import emp1 from "../assets/images/emp-1.svg";
 import emp2 from "../assets/images/emp-2.svg";
 import emp3 from "../assets/images/emp-3.svg";
 import emp4 from "../assets/images/emp-4.svg";
-import phoneMockup from "../assets/images/iphone-mockup.png";
+import phoneMockup from "../assets/images/iphone-mockup-logo.png";
 import onlineSelling from "../assets/images/online-selling.png";
 import { Link } from "react-router-dom";
 
@@ -40,7 +40,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="about py-5 text-light">
+      <section id="about" className="about py-5 text-light">
         <div className="text-center mx-5 px-5">
           <h1 className="page-title">About Bubs</h1>
 
@@ -92,14 +92,9 @@ const Home = () => {
               pop-up hella etsy literally 8-bit leggings kitsch whatever.
             </p>
           </div>
-          <div>
-            <Link to="/bgx-web/about">
-              <button className="btn">learn more</button>
-            </Link>
-          </div>
         </div>
       </section>
-      <section className="team py-5 ">
+      <section id="team" className="team py-5 ">
         <div className="text-center mx-5 px-5">
           <h1 className="page-title text-light">Meet The Team</h1>
         </div>
@@ -109,11 +104,47 @@ const Home = () => {
           <img src={emp3} className="emp-avatar" alt="avatar of employee" />
           <img src={emp4} className="emp-avatar" alt="avatar of employee" />
         </div>
-        <div className="flex-row justify-center">
-          <Link to="/bgx-web/team">
-            <button className="btn-secondary">learn more</button>
-          </Link>
+      </section>
+      <section id="signup" className="signup py-5">
+        <div className="text-center mx-5 px-5 text-light">
+          <h1 className="page-title">Sign Up</h1>
+          <p>
+            Be the first to know when our beta launches! Sign up now to receive
+            updates and exclusive access to our innovative platform.
+          </p>
         </div>
+        <form className="form justify-center">
+          <div class="form-entry">
+            {/* <label class="form-label " name="name">
+              Name
+            </label> */}
+            <input
+              type="text"
+              placeholder="Name"
+              class="form-input"
+              name="name"
+            />
+          </div>
+          <div class="form-entry">
+            {/* <label class="form-label " name="email">
+              Email Address
+            </label> */}
+            <input
+              type="text"
+              placeholder="Email Address"
+              class="form-input"
+              name="email"
+            />
+          </div>
+          <div class="flex-row justify-center" id="error-message-display">
+            <p class="display-none" id="error-message">
+              An unexpected error occurred
+            </p>
+            <button type="submit" className="btn">
+              Submit
+            </button>
+          </div>
+        </form>
       </section>
     </>
   );

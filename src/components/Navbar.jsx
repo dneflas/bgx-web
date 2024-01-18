@@ -1,26 +1,36 @@
-import { Link } from "react-router-dom";
-
 const Navbar = ({ currentSection, setCurrentSection }) => {
+  const handleLinkClick = (id) => {
+    setCurrentSection(id);
+    const element = document.getElementById(id);
+    if (element) {
+      const offset = 60; // Adjust the offset based on your navbar's height
+      const offsetPosition = element.offsetTop - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
-    <nav className="">
-      <Link
+    <nav>
+      <a
         className={`ml-2 my-1 px-2 mx-5 py-1 text-dark ${
           currentSection === "about" && "nav-active"
         }`}
-        onClick={() => setCurrentSection("about")}
-        to="/bgx-web/about"
+        onClick={() => handleLinkClick("about")}
       >
         About
-      </Link>
-      <Link
+      </a>
+      <a
         className={`ml-2 my-1 px-2 mx-5 py-1 text-dark ${
           currentSection === "team" && "nav-active"
         }`}
-        onClick={() => setCurrentSection("team")}
-        to="/bgx-web/team"
+        onClick={() => handleLinkClick("team")}
       >
         Team
-      </Link>
+      </a>
     </nav>
   );
 };

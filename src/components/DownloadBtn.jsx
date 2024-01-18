@@ -1,10 +1,8 @@
-import { Link } from "react-router-dom";
-
 const DownloadBtn = () => {
   return (
-    <Link to="/bgx-web/download">
+    <a href="#signup">
       <button className="btn">Get Started</button>;
-    </Link>
+    </a>
   );
 };
 
