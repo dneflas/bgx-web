@@ -106,9 +106,43 @@ const Home = () => {
         </div>
       </section>
       <section id="signup" className="signup py-5">
-        <form>
-          <div className="text-center mx-5 px-5">
-            <h1 className="page-title text-light">Sign Up</h1>
+        <div className="text-center mx-5 px-5 text-light">
+          <h1 className="page-title">Sign Up</h1>
+          <p>
+            Be the first to know when our beta launches! Sign up now to receive
+            updates and exclusive access to our innovative platform.
+          </p>
+        </div>
+        <form className="form">
+          <div class="form-entry">
+            <label class="form-label " name="name">
+              Name
+            </label>
+            <input
+              type="text"
+              placeholder="Name"
+              class="form-input"
+              name="name"
+            />
+          </div>
+          <div class="form-entry">
+            <label class="form-label " name="email">
+              Email Address
+            </label>
+            <input
+              type="text"
+              placeholder="Email Address"
+              class="form-input"
+              name="email"
+            />
+          </div>
+          <div class="flex-row justify-flex-end" id="error-message-display">
+            <p class="display-none" id="error-message">
+              An unexpected error occurred
+            </p>
+            <button type="submit" class="btn">
+              Submit
+            </button>
           </div>
         </form>
       </section>
