@@ -115,36 +115,38 @@ const Home = () => {
             updates and exclusive access to our innovative platform.
           </p>
         </div>
-        <form className="form justify-center">
-          <div class="form-entry">
-            {/* <label class="form-label " name="name">
+        <form className="form flex-row justify-center">
+          <div className="col-sm-11 col-md-6">
+            <div class="form-entry">
+              {/* <label class="form-label " name="name">
               Name
             </label> */}
-            <input
-              type="text"
-              placeholder="Name"
-              class="form-input"
-              name="name"
-            />
-          </div>
-          <div class="form-entry">
-            {/* <label class="form-label " name="email">
+              <input
+                type="text"
+                placeholder="Name"
+                class="form-input"
+                name="name"
+              />
+            </div>
+            <div class="form-entry">
+              {/* <label class="form-label " name="email">
               Email Address
             </label> */}
-            <input
-              type="text"
-              placeholder="Email Address"
-              class="form-input"
-              name="email"
-            />
-          </div>
-          <div class="flex-row justify-center" id="error-message-display">
-            <p class="display-none" id="error-message">
-              An unexpected error occurred
-            </p>
-            <button type="submit" className="btn">
-              Submit
-            </button>
+              <input
+                type="text"
+                placeholder="Email Address"
+                class="form-input"
+                name="email"
+              />
+            </div>
+            <div class="flex-row justify-center" id="error-message-display">
+              <p class="display-none" id="error-message">
+                An unexpected error occurred
+              </p>
+              <button type="submit" className="btn">
+                Submit
+              </button>
+            </div>
           </div>
         </form>
       </section>
