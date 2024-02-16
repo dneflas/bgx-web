@@ -1,7 +1,7 @@
 const DownloadBtn = () => {
   return (
     <a href="#signup">
-      <button className="btn">Get Started</button>;
+      <button className="btn">Get Started</button>
     </a>
   );
 };

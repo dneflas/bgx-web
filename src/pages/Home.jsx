@@ -47,7 +47,7 @@ const Home = () => {
           <h1 className="page-title">About Bubs</h1>
 
           <div className="flex-row justify-space-between">
-            <p className="col-6 py-5">
+            <p className=" col-12 col-lg-6 my-5">
               Art party roof party butcher single-origin coffee gluten-free
               offal. Banh mi palo santo mlkshk, yuccie master cleanse normcore
               williamsburg cred DIY quinoa tousled crucifix bitters cornhole
@@ -64,20 +64,20 @@ const Home = () => {
               pop-up hella etsy literally 8-bit leggings kitsch whatever.
             </p>
             <img
-              className="grow col-4"
+              className="grow col-12 col-lg-4"
               src={phoneMockup}
               alt="bubs app mockup"
-              width="500px"
+              // width="500px"
             />
           </div>
           <div className="flex-row justify-space-between">
             <img
-              className="grow col-5"
+              className="grow col-12 col-lg-5"
               src={onlineSelling}
               alt="bubs app mockup"
-              width="600px"
+              // width="600px"
             />
-            <p className="col-5 py-5">
+            <p className="col-12 col-lg-5 my-5">
               Art party roof party butcher single-origin coffee gluten-free
               offal. Banh mi palo santo mlkshk, yuccie master cleanse normcore
               williamsburg cred DIY quinoa tousled crucifix bitters cornhole
@@ -101,10 +101,26 @@ const Home = () => {
           <h1 className="page-title text-light">Meet The Team</h1>
         </div>
         <div className="flex-row justify-space-around py-5">
-          <img src={emp1} className="emp-avatar" alt="avatar of employee" />
-          <img src={emp2} className="emp-avatar" alt="avatar of employee" />
-          <img src={emp3} className="emp-avatar" alt="avatar of employee" />
-          <img src={emp4} className="emp-avatar" alt="avatar of employee" />
+          <img
+            src={emp1}
+            className="emp-avatar col-6 col-md-2"
+            alt="avatar of employee"
+          />
+          <img
+            src={emp2}
+            className="emp-avatar col-6 col-md-2"
+            alt="avatar of employee"
+          />
+          <img
+            src={emp3}
+            className="emp-avatar col-6 col-md-2"
+            alt="avatar of employee"
+          />
+          <img
+            src={emp4}
+            className="emp-avatar col-6 col-md-2"
+            alt="avatar of employee"
+          />
         </div>
       </section>
       <section id="signup" className="signup py-5">
@@ -115,8 +131,12 @@ const Home = () => {
             updates and exclusive access to our innovative platform.
           </p>
         </div>
-        <form className="form flex-row justify-center">
-          <div className="col-sm-11 col-md-6">
+        <form
+          className="form flex-row justify-center"
+          method="POST"
+          action="https://script.google.com/macros/s/AKfycbzFLF0NBUZNaRJPWX4vc30h2IDfATngcm3bBYBCu4nW1b2Zn77DWB8m0gRHoHy_E2Fs/exec"
+        >
+          <div className="col-11 col-md-6">
             <div class="form-entry">
               {/* <label class="form-label " name="name">
               Name
@@ -125,7 +145,7 @@ const Home = () => {
                 type="text"
                 placeholder="Name"
                 class="form-input"
-                name="name"
+                name="Name"
               />
             </div>
             <div class="form-entry">
@@ -136,7 +156,7 @@ const Home = () => {
                 type="text"
                 placeholder="Email Address"
                 class="form-input"
-                name="email"
+                name="Email"
               />
             </div>
             <div class="flex-row justify-center" id="error-message-display">
