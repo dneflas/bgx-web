@@ -19,7 +19,7 @@ const socialIcons = [
 
 const Footer = () => {
   return (
-    <footer className="flex-row justify-center py-2 ">
+    <footer className="flex-row justify-flex-end mx-4 py-2 ">
       {socialIcons.map((social) => (
         <a
           href={social.link}

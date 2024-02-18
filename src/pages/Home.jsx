@@ -65,7 +65,7 @@ const Home = () => {
       body: data,
     }).then(() => {
       console.log(formState);
-      // update below alert to success modal
+      // update below alert to success modal, need to clear form as well
       alert("Success!");
       setFormState({
         Name: "",
