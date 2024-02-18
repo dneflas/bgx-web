@@ -7,6 +7,7 @@ import emp4 from "../assets/images/emp-4.svg";
 import phoneMockup from "../assets/images/iphone-mockup-logo.png";
 import onlineSelling from "../assets/images/online-selling.png";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const Home = () => {
   window.addEventListener(
@@ -19,6 +20,61 @@ const Home = () => {
     },
     false
   );
+
+  const [formState, setFormState] = useState({
+    Name: "",
+    Email: "",
+  });
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const validateEmail = (email) => {
+    var re = /^([a-z0-9_.-]+)@([\da-z.-]+)\.([a-z.]{2,6})$/;
+    return re.test(String(email).toLowerCase());
+  };
+
+  function handleChange(event) {
+    const { name, value } = event.target;
+    if (name === "Email") {
+      const isValid = validateEmail(value);
+      if (!isValid) {
+        setErrorMessage("Your email is invalid");
+      } else {
+        setErrorMessage("");
+      }
+    } else {
+      if (!value.length) {
+        setErrorMessage(capitalizeFirstLetter(`${name} is required.`));
+      } else {
+        setErrorMessage("");
+      }
+    }
+    if (!errorMessage) {
+      setFormState({ ...formState, [name]: value });
+    }
+    console.log(formState);
+  }
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    const form = document.getElementById("signup-form");
+    const data = new FormData(form);
+    const action = e.target.action;
+
+    fetch(action, {
+      method: "POST",
+      body: data,
+    }).then(() => {
+      console.log(formState);
+      // update below alert to success modal
+      alert("Success!");
+      setFormState({
+        Name: "",
+        Email: "",
+      });
+      console.log(formState);
+    });
+  };
+
   return (
     <>
       <section id="hero" className="">
@@ -132,35 +188,38 @@ const Home = () => {
           </p>
         </div>
         <form
+          id="signup-form"
           className="form flex-row justify-center"
-          method="POST"
+          onSubmit={handleFormSubmit}
+          onChange={handleChange}
+          // method="POST"
           action="https://script.google.com/macros/s/AKfycbzFLF0NBUZNaRJPWX4vc30h2IDfATngcm3bBYBCu4nW1b2Zn77DWB8m0gRHoHy_E2Fs/exec"
         >
           <div className="col-11 col-md-6">
-            <div class="form-entry">
-              {/* <label class="form-label " name="name">
+            <div className="form-entry">
+              {/* <label className="form-label " name="name">
               Name
             </label> */}
               <input
                 type="text"
                 placeholder="Name"
-                class="form-input"
+                className="form-input"
                 name="Name"
               />
             </div>
-            <div class="form-entry">
-              {/* <label class="form-label " name="email">
+            <div className="form-entry">
+              {/* <label className="form-label " name="email">
               Email Address
             </label> */}
               <input
                 type="text"
                 placeholder="Email Address"
-                class="form-input"
+                className="form-input"
                 name="Email"
               />
             </div>
-            <div class="flex-row justify-center" id="error-message-display">
-              <p class="display-none" id="error-message">
+            <div className="flex-row justify-center" id="error-message-display">
+              <p className="display-none" id="error-message">
                 An unexpected error occurred
               </p>
               <button type="submit" className="btn">
