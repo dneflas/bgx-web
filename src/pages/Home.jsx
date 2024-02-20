@@ -25,9 +25,13 @@ const Home = () => {
   return (
     <>
       <section id="hero" className="">
-        <div className="text-light mx-5 pr-5">
+        <div className="text-light mx-4">
           <div className="flex-row justify-flex-end">
-            <img src={logoIcon} alt="Red outline of box with gear inside" />
+            <img
+              src={logoIcon}
+              alt="Red outline of box with gear inside"
+              className="col-12 col-sm-2"
+            />
           </div>
           <h1 className="page-title text-right">
             Built by parents, for parents.
@@ -45,9 +49,9 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section id="about" className="about py-5 text-light">
-        <div className="text-center mx-5 px-5">
-          <h1 className="page-title">About Bubs</h1>
+      <section id="about" className="about py-5 px-4 text-light">
+        <div className="text-center flex-row">
+          <h1 className="page-title col-12">About Bubs</h1>
 
           <div className="flex-row justify-space-between">
             <p className=" col-12 col-lg-6 my-5">
@@ -100,8 +104,8 @@ const Home = () => {
         </div>
       </section>
       <section id="team" className="team py-5 ">
-        <div className="text-center mx-5 px-5">
-          <h1 className="page-title text-light">Meet The Team</h1>
+        <div className="text-center flex-row">
+          <h1 className="page-title text-light col-12">Meet The Team</h1>
         </div>
         <div className="flex-row justify-space-around py-5">
           <img

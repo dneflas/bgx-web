@@ -14,7 +14,7 @@ const Navbar = ({ currentSection, setCurrentSection }) => {
   };
 
   return (
-    <nav>
+    <nav className="flex-row">
       <a
         className={`ml-2 my-1 px-2 mx-5 py-1 text-dark ${
           currentSection === "about" && "nav-active"
