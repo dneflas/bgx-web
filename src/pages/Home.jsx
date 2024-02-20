@@ -127,9 +127,9 @@ const Home = () => {
         </div>
       </section>
       <section id="signup" className="signup py-5">
-        <div className="text-center mx-5 px-5 text-light">
-          <h1 className="page-title">Sign Up</h1>
-          <p>
+        <div className="text-center flex-row justify-center text-light">
+          <h1 className="page-title col-12">Sign Up</h1>
+          <p className="col-10">
             Be the first to know when our beta launches! Sign up now to receive
             updates and exclusive access to our innovative platform.
           </p>

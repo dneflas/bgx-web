@@ -59,14 +59,10 @@ const SignUpForm = () => {
       className="form flex-row justify-center"
       onSubmit={handleFormSubmit}
       onChange={handleChange}
-      // method="POST"
       action="https://script.google.com/macros/s/AKfycbzFLF0NBUZNaRJPWX4vc30h2IDfATngcm3bBYBCu4nW1b2Zn77DWB8m0gRHoHy_E2Fs/exec"
     >
       <div className="col-11 col-md-6">
         <div className="form-entry">
-          {/* <label className="form-label " name="name">
-    Name
-  </label> */}
           <input
             type="text"
             placeholder="Name"
@@ -75,9 +71,6 @@ const SignUpForm = () => {
           />
         </div>
         <div className="form-entry">
-          {/* <label className="form-label " name="email">
-    Email Address
-  </label> */}
           <input
             type="text"
             placeholder="Email Address"
