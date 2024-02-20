@@ -6,8 +6,6 @@ import emp3 from "../assets/images/emp-3.svg";
 import emp4 from "../assets/images/emp-4.svg";
 import phoneMockup from "../assets/images/iphone-mockup-logo.png";
 import onlineSelling from "../assets/images/online-selling.png";
-import { Link } from "react-router-dom";
-import { useState } from "react";
 import SignUpForm from "../components/SignupForm";
 
 const Home = () => {
@@ -54,7 +52,7 @@ const Home = () => {
           <h1 className="page-title col-12">About Bubs</h1>
 
           <div className="flex-row justify-space-between">
-            <p className=" col-12 col-lg-6 my-5">
+            <p className="col-12 col-lg-6 my-5">
               Art party roof party butcher single-origin coffee gluten-free
               offal. Banh mi palo santo mlkshk, yuccie master cleanse normcore
               williamsburg cred DIY quinoa tousled crucifix bitters cornhole
@@ -74,7 +72,6 @@ const Home = () => {
               className="grow col-12 col-lg-4"
               src={phoneMockup}
               alt="bubs app mockup"
-              // width="500px"
             />
           </div>
           <div className="flex-row justify-space-between">
@@ -82,7 +79,6 @@ const Home = () => {
               className="grow col-12 col-lg-5"
               src={onlineSelling}
               alt="bubs app mockup"
-              // width="600px"
             />
             <p className="col-12 col-lg-5 my-5">
               Art party roof party butcher single-origin coffee gluten-free
@@ -103,7 +99,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section id="team" className="team py-5 ">
+      <section id="team" className="team py-5 px-4">
         <div className="text-center flex-row">
           <h1 className="page-title text-light col-12">Meet The Team</h1>
         </div>
