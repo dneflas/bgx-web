@@ -6,8 +6,7 @@ import emp3 from "../assets/images/emp-3.svg";
 import emp4 from "../assets/images/emp-4.svg";
 import phoneMockup from "../assets/images/iphone-mockup-logo.png";
 import onlineSelling from "../assets/images/online-selling.png";
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import SignUpForm from "../components/SignupForm";
 
 const Home = () => {
   window.addEventListener(
@@ -21,66 +20,16 @@ const Home = () => {
     false
   );
 
-  const [formState, setFormState] = useState({
-    Name: "",
-    Email: "",
-  });
-  const [errorMessage, setErrorMessage] = useState("");
-
-  const validateEmail = (email) => {
-    var re = /^([a-z0-9_.-]+)@([\da-z.-]+)\.([a-z.]{2,6})$/;
-    return re.test(String(email).toLowerCase());
-  };
-
-  function handleChange(event) {
-    const { name, value } = event.target;
-    if (name === "Email") {
-      const isValid = validateEmail(value);
-      if (!isValid) {
-        setErrorMessage("Your email is invalid");
-      } else {
-        setErrorMessage("");
-      }
-    } else {
-      if (!value.length) {
-        setErrorMessage(capitalizeFirstLetter(`${name} is required.`));
-      } else {
-        setErrorMessage("");
-      }
-    }
-    if (!errorMessage) {
-      setFormState({ ...formState, [name]: value });
-    }
-    console.log(formState);
-  }
-
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-    const form = document.getElementById("signup-form");
-    const data = new FormData(form);
-    const action = e.target.action;
-
-    fetch(action, {
-      method: "POST",
-      body: data,
-    }).then(() => {
-      console.log(formState);
-      // update below alert to success modal, need to clear form as well
-      alert("Success!");
-      setFormState({
-        Name: "",
-        Email: "",
-      });
-      console.log(formState);
-    });
-  };
-
   return (
     <>
       <section id="hero" className="">
-        <div className="text-light mx-5 pr-5">
+        <div className="text-light mx-4">
           <div className="flex-row justify-flex-end">
-            <img src={logoIcon} alt="Red outline of box with gear inside" />
+            <img
+              src={logoIcon}
+              alt="Red outline of box with gear inside"
+              className="col-12 col-sm-2"
+            />
           </div>
           <h1 className="page-title text-right">
             Built by parents, for parents.
@@ -98,12 +47,12 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section id="about" className="about py-5 text-light">
-        <div className="text-center mx-5 px-5">
-          <h1 className="page-title">About Bubs</h1>
+      <section id="about" className="about py-5 px-4 text-light">
+        <div className="text-center flex-row">
+          <h1 className="page-title col-12">About Bubs</h1>
 
           <div className="flex-row justify-space-between">
-            <p className=" col-12 col-lg-6 my-5">
+            <p className="col-12 col-lg-6 my-5">
               Art party roof party butcher single-origin coffee gluten-free
               offal. Banh mi palo santo mlkshk, yuccie master cleanse normcore
               williamsburg cred DIY quinoa tousled crucifix bitters cornhole
@@ -123,7 +72,6 @@ const Home = () => {
               className="grow col-12 col-lg-4"
               src={phoneMockup}
               alt="bubs app mockup"
-              // width="500px"
             />
           </div>
           <div className="flex-row justify-space-between">
@@ -131,7 +79,6 @@ const Home = () => {
               className="grow col-12 col-lg-5"
               src={onlineSelling}
               alt="bubs app mockup"
-              // width="600px"
             />
             <p className="col-12 col-lg-5 my-5">
               Art party roof party butcher single-origin coffee gluten-free
@@ -152,9 +99,9 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section id="team" className="team py-5 ">
-        <div className="text-center mx-5 px-5">
-          <h1 className="page-title text-light">Meet The Team</h1>
+      <section id="team" className="team py-5 px-4">
+        <div className="text-center flex-row">
+          <h1 className="page-title text-light col-12">Meet The Team</h1>
         </div>
         <div className="flex-row justify-space-around py-5">
           <img
@@ -180,54 +127,14 @@ const Home = () => {
         </div>
       </section>
       <section id="signup" className="signup py-5">
-        <div className="text-center mx-5 px-5 text-light">
-          <h1 className="page-title">Sign Up</h1>
-          <p>
+        <div className="text-center flex-row justify-center text-light">
+          <h1 className="page-title col-12">Sign Up</h1>
+          <p className="col-10">
             Be the first to know when our beta launches! Sign up now to receive
             updates and exclusive access to our innovative platform.
           </p>
         </div>
-        <form
-          id="signup-form"
-          className="form flex-row justify-center"
-          onSubmit={handleFormSubmit}
-          onChange={handleChange}
-          // method="POST"
-          action="https://script.google.com/macros/s/AKfycbzFLF0NBUZNaRJPWX4vc30h2IDfATngcm3bBYBCu4nW1b2Zn77DWB8m0gRHoHy_E2Fs/exec"
-        >
-          <div className="col-11 col-md-6">
-            <div className="form-entry">
-              {/* <label className="form-label " name="name">
-              Name
-            </label> */}
-              <input
-                type="text"
-                placeholder="Name"
-                className="form-input"
-                name="Name"
-              />
-            </div>
-            <div className="form-entry">
-              {/* <label className="form-label " name="email">
-              Email Address
-            </label> */}
-              <input
-                type="text"
-                placeholder="Email Address"
-                className="form-input"
-                name="Email"
-              />
-            </div>
-            <div className="flex-row justify-center" id="error-message-display">
-              <p className="display-none" id="error-message">
-                An unexpected error occurred
-              </p>
-              <button type="submit" className="btn">
-                Submit
-              </button>
-            </div>
-          </div>
-        </form>
+        <SignUpForm />
       </section>
     </>
   );

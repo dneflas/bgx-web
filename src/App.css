@@ -1198,6 +1198,7 @@ nav a:hover {
 
 .grow {
   transition: all 0.2s ease-in-out;
+  max-width: 100%;
 }
 .grow:hover {
   transform: scale(1.1);

@@ -5,7 +5,7 @@ import instagramIcon from "../assets/images/instagram.svg";
 const socialIcons = [
   {
     icon: twitterIcon,
-    alt: "Twitter bird logo",
+    alt: "X logo, formerly known as twitter",
     link: "https://twitter.com/hellobubs_app",
   },
   { icon: logoIcon, alt: "Bubs icon", link: "#" },
