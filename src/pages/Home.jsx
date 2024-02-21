@@ -1,7 +1,7 @@
 import DownloadBtn from "../components/DownloadBtn";
 import logoIcon from "../assets/images/logo.png";
-import emp1 from "../assets/images/emp-1.svg";
-import emp2 from "../assets/images/emp-2.svg";
+import emp1 from "../assets/images/emp-1.png";
+import emp2 from "../assets/images/emp-1.png";
 import emp3 from "../assets/images/emp-3.svg";
 import emp4 from "../assets/images/emp-4.svg";
 import phoneMockup from "../assets/images/iphone-mockup-logo.png";
@@ -9,6 +9,16 @@ import onlineSelling from "../assets/images/online-selling.png";
 import SignUpForm from "../components/SignupForm";
 
 const Home = () => {
+  const employees = [
+    {
+      name: "David Ninobla",
+      img: emp1,
+    },
+    {
+      name: "Debbie Neflas",
+      img: emp2,
+    },
+  ];
   window.addEventListener(
     "scroll",
     () => {
@@ -101,27 +111,15 @@ const Home = () => {
         <div className="text-center flex-row">
           <h1 className="page-title text-light col-12">Meet The Team</h1>
         </div>
-        <div className="flex-row justify-space-around py-5">
-          <img
-            src={emp1}
-            className="emp-avatar col-6 col-md-2"
-            alt="avatar of employee"
-          />
-          <img
-            src={emp2}
-            className="emp-avatar col-6 col-md-2"
-            alt="avatar of employee"
-          />
-          <img
-            src={emp3}
-            className="emp-avatar col-6 col-md-2"
-            alt="avatar of employee"
-          />
-          <img
-            src={emp4}
-            className="emp-avatar col-6 col-md-2"
-            alt="avatar of employee"
-          />
+        <div className="flex-row justify-center py-5">
+          {employees.map((emp) => (
+            <img
+              key={emp.name}
+              src={emp.img}
+              className="emp-avatar col-4 col-md-2 m-5 "
+              alt={`Avatar or ${emp.name}`}
+            />
+          ))}
         </div>
       </section>
       <section id="signup" className="signup py-5">

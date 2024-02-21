@@ -3,12 +3,11 @@ const Navbar = ({ currentSection, setCurrentSection }) => {
     setCurrentSection(id);
     const element = document.getElementById(id);
     if (element) {
-      const offset = 60; // Adjust the offset based on your navbar's height
+      const offset = 60;
       const offsetPosition = element.offsetTop - offset;
 
       window.scrollTo({
         top: offsetPosition,
-        behavior: "smooth",
       });
     }
   };
