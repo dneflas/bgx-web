@@ -84,7 +84,7 @@ const Home = () => {
           </div>
           <div className="flex-row justify-space-between">
             <img
-              className="grow col-12 col-lg-5"
+              className="grow col-12 col-lg-6"
               src={onlineSelling}
               alt="bubs app mockup"
             />

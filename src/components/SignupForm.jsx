@@ -79,12 +79,15 @@ const SignUpForm = () => {
           />
         </div>
         <div className="flex-row justify-center" id="error-message-display">
-          <p className="display-none" id="error-message">
-            An unexpected error occurred
-          </p>
-          <button type="submit" className="btn">
-            Submit
-          </button>
+          {errorMessage ? (
+            <div className="col-12 text-center">
+              <p className="text-light m-3">{errorMessage}</p>
+            </div>
+          ) : (
+            <button type="submit" className="btn">
+              Submit
+            </button>
+          )}
         </div>
       </div>
     </form>
