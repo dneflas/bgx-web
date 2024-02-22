@@ -1,9 +1,9 @@
-const Navbar = ({ currentSection, setCurrentSection }) => {
+const Navbar = ({ currentSection, setCurrentSection, headerHeight }) => {
   const handleLinkClick = (id) => {
     setCurrentSection(id);
     const element = document.getElementById(id);
     if (element) {
-      const offset = 60;
+      const offset = headerHeight;
       const offsetPosition = element.offsetTop - offset;
 
       window.scrollTo({
