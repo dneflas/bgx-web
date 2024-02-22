@@ -851,6 +851,10 @@ nav a:hover {
   flex-wrap: wrap;
 }
 
+.flex-reverse {
+  flex-wrap: wrap-reverse;
+}
+
 .justify-space-between {
   justify-content: space-between;
 }

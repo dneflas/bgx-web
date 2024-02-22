@@ -45,7 +45,6 @@ const SignUpForm = () => {
       body: data,
     }).then(() => {
       console.log(formState);
-      // update below alert to success modal, need to clear form as well
       setFormSubmit(true);
     });
     setFormState({
