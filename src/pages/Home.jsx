@@ -77,14 +77,14 @@ const Home = () => {
               pop-up hella etsy literally 8-bit leggings kitsch whatever.
             </p>
             <img
-              className="grow col-12 col-lg-4"
+              className="grow col-12 col-md-4"
               src={phoneMockup}
               alt="bubs app mockup"
             />
           </div>
-          <div className="flex-row justify-space-between">
+          <div className="flex-row flex-reverse justify-space-between">
             <img
-              className="grow col-12 col-lg-6"
+              className="grow col-12 col-md-6"
               src={onlineSelling}
               alt="bubs app mockup"
             />

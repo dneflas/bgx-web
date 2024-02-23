@@ -45,7 +45,6 @@ const SignUpForm = () => {
       body: data,
     }).then(() => {
       console.log(formState);
-      // update below alert to success modal, need to clear form as well
       setFormSubmit(true);
     });
     setFormState({
@@ -85,6 +84,7 @@ const SignUpForm = () => {
                 placeholder="Name"
                 className="form-input"
                 name="Name"
+                autoComplete="name"
               />
             </div>
             <div className="form-entry">
@@ -93,6 +93,7 @@ const SignUpForm = () => {
                 placeholder="Email Address"
                 className="form-input"
                 name="Email"
+                autoComplete="email"
               />
             </div>
             <div className="flex-row justify-center" id="error-message-display">

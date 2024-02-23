@@ -85,7 +85,6 @@ header {
 
 nav {
   width: 100%;
-  margin-top: 28px;
   justify-content: center;
 }
 
@@ -849,6 +848,10 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+}
+
+.flex-reverse {
+  flex-wrap: wrap-reverse;
 }
 
 .justify-space-between {
