@@ -84,6 +84,7 @@ const SignUpForm = () => {
                 placeholder="Name"
                 className="form-input"
                 name="Name"
+                autoComplete="name"
               />
             </div>
             <div className="form-entry">
@@ -92,6 +93,7 @@ const SignUpForm = () => {
                 placeholder="Email Address"
                 className="form-input"
                 name="Email"
+                autoComplete="email"
               />
             </div>
             <div className="flex-row justify-center" id="error-message-display">
