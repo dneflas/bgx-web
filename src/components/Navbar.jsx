@@ -1,4 +1,9 @@
-const Navbar = ({ currentSection, setCurrentSection, headerHeight }) => {
+const Navbar = ({
+  currentSection,
+  setCurrentSection,
+  headerHeight,
+  mobileScreenWidth,
+}) => {
   const handleLinkClick = (id) => {
     setCurrentSection(id);
     const element = document.getElementById(id);
@@ -13,9 +18,13 @@ const Navbar = ({ currentSection, setCurrentSection, headerHeight }) => {
   };
 
   return (
-    <nav className="flex-row">
+    <nav
+      className={`flex-row col-6 col-md-6 justify-space-around ${
+        !mobileScreenWidth && "mt-4"
+      }`}
+    >
       <a
-        className={`ml-2 my-1 px-2 mx-5 py-1 text-dark ${
+        className={`ml-2 my-1 px-2 py-1 text-dark ${
           currentSection === "about" && "nav-active"
         }`}
         onClick={() => handleLinkClick("about")}
@@ -23,7 +32,7 @@ const Navbar = ({ currentSection, setCurrentSection, headerHeight }) => {
         About
       </a>
       <a
-        className={`ml-2 my-1 px-2 mx-5 py-1 text-dark ${
+        className={`ml-2 my-1 px-2 py-1 text-dark ${
           currentSection === "team" && "nav-active"
         }`}
         onClick={() => handleLinkClick("team")}
