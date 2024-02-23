@@ -38,7 +38,7 @@ const Header = ({ currentSection, setCurrentSection }) => {
       ref={elementRef}
     >
       <div
-        className={`flex-row col-12 col-md-10 ${
+        className={`flex-row col-12 col-sm-9 ${
           mobileScreenWidth && "justify-space-around"
         }`}
       >
@@ -56,7 +56,7 @@ const Header = ({ currentSection, setCurrentSection }) => {
           mobileScreenWidth={mobileScreenWidth}
         />
       </div>
-      <div className="flex-row col-12 col-md-2 justify-center">
+      <div className="flex-row col-12 col-sm-3 justify-center">
         <DownloadBtn className="col-12" />
       </div>
     </header>
