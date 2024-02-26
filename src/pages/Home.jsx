@@ -41,14 +41,12 @@ const Home = () => {
               className="col-12 col-sm-2"
             />
           </div>
-          <h1 className="page-title">Built by parents, for parents.</h1>
+          <h1 className="page-title">
+            A marketplace. Built by parents, for parents.
+          </h1>
           <p className="">
-            I'm baby palo santo selfies narwhal, banh mi coloring book
-            williamsburg art party blackbird spyplane hoodie single-origin
-            coffee messenger bag hella post-ironic glossier. Bruh artisan
-            drinking vinegar taxidermy vinyl waistcoat quinoa. Mlkshk synth
-            ennui tacos deep v pabst crucifix, schlitz wolf selfies fixie
-            microdosing cold-pressed try-hard.
+            This platform is designed to offer a seamless experience for
+            discovering and trading items that support your child's growth.
           </p>
           <div className=" ml-5">
             <DownloadBtn className="my-auto" />

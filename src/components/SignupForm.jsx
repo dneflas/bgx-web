@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Loader from "./Loader";
+
 const SignUpForm = () => {
   const [formState, setFormState] = useState({
     Name: "",
@@ -6,6 +8,7 @@ const SignUpForm = () => {
   });
   const [errorMessage, setErrorMessage] = useState("");
   const [formSubmit, setFormSubmit] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const validateEmail = (email) => {
     var re = /^([a-z0-9_.-]+)@([\da-z.-]+)\.([a-z.]{2,6})$/;
@@ -17,7 +20,7 @@ const SignUpForm = () => {
     if (name === "Email") {
       const isValid = validateEmail(value);
       if (!isValid) {
-        setErrorMessage("Your email is invalid");
+        setErrorMessage("Email is invalid");
       } else {
         setErrorMessage("");
       }
@@ -36,6 +39,7 @@ const SignUpForm = () => {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
+    setIsLoading(true);
     const form = document.getElementById("signup-form");
     const data = new FormData(form);
     const action = e.target.action;
@@ -45,6 +49,7 @@ const SignUpForm = () => {
       body: data,
     }).then(() => {
       console.log(formState);
+      setIsLoading(false);
       setFormSubmit(true);
     });
     setFormState({
@@ -97,7 +102,9 @@ const SignUpForm = () => {
               />
             </div>
             <div className="flex-row justify-center" id="error-message-display">
-              {errorMessage ? (
+              {isLoading ? (
+                <Loader />
+              ) : errorMessage ? (
                 <div className="col-12 text-center">
                   <p className="text-light m-3">{errorMessage}</p>
                 </div>
