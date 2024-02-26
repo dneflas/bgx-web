@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Loader from "./Loader";
+
 const SignUpForm = () => {
   const [formState, setFormState] = useState({
     Name: "",
@@ -58,7 +60,6 @@ const SignUpForm = () => {
   };
   return (
     <>
-      {isLoading && <p className="text-light text-center">Loading...</p>}
       {formSubmit ? (
         <>
           <div className="flex-row my-3 justify-center">
@@ -101,7 +102,9 @@ const SignUpForm = () => {
               />
             </div>
             <div className="flex-row justify-center" id="error-message-display">
-              {errorMessage ? (
+              {isLoading ? (
+                <Loader />
+              ) : errorMessage ? (
                 <div className="col-12 text-center">
                   <p className="text-light m-3">{errorMessage}</p>
                 </div>
