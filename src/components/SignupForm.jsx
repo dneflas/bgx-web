@@ -6,6 +6,7 @@ const SignUpForm = () => {
   });
   const [errorMessage, setErrorMessage] = useState("");
   const [formSubmit, setFormSubmit] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const validateEmail = (email) => {
     var re = /^([a-z0-9_.-]+)@([\da-z.-]+)\.([a-z.]{2,6})$/;
@@ -17,7 +18,7 @@ const SignUpForm = () => {
     if (name === "Email") {
       const isValid = validateEmail(value);
       if (!isValid) {
-        setErrorMessage("Your email is invalid");
+        setErrorMessage("Email is invalid");
       } else {
         setErrorMessage("");
       }
@@ -36,6 +37,7 @@ const SignUpForm = () => {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
+    setIsLoading(true);
     const form = document.getElementById("signup-form");
     const data = new FormData(form);
     const action = e.target.action;
@@ -45,6 +47,7 @@ const SignUpForm = () => {
       body: data,
     }).then(() => {
       console.log(formState);
+      setIsLoading(false);
       setFormSubmit(true);
     });
     setFormState({
@@ -55,6 +58,7 @@ const SignUpForm = () => {
   };
   return (
     <>
+      {isLoading && <p className="text-light text-center">Loading...</p>}
       {formSubmit ? (
         <>
           <div className="flex-row my-3 justify-center">
