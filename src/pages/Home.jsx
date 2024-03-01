@@ -66,6 +66,7 @@ const Home = () => {
 
   return (
     <>
+      {/* Hero Section */}
       <section id="hero" className="">
         <div className="text-light mx-4">
           <div className="flex-row justify-flex-start">
@@ -88,6 +89,7 @@ const Home = () => {
         </div>
       </section>
       <About />
+      {/* Team Section */}
       <section id="team" className="team py-5 px-4">
         <div className="text-center flex-row">
           <h1 className="page-title text-light col-12">Meet The Team</h1>
@@ -103,10 +105,18 @@ const Home = () => {
           ))}
         </div>
       </section>
+      {/* Sign Up Section */}
       <section id="signup" className="signup py-5">
         <div className="text-center flex-row justify-center text-light">
-          <h1 className="page-title col-12">Sign Up</h1>
+          <h1 className="page-title col-12">Join Our Community</h1>
           <p className="col-10">
+            Hello-BUBS.com is more than just a marketplace; it's a community of
+            parents navigating the beautiful, albeit sometimes challenging,
+            journey of raising children. By sharing resources, we not only help
+            each other but also foster a more sustainable world for our
+            children.
+            <br />
+            <br />
             Be the first to know when our beta launches! Sign up now to receive
             updates and exclusive access to our innovative platform.
           </p>
