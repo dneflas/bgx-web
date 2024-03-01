@@ -1,12 +1,10 @@
+import { useEffect } from "react";
 import DownloadBtn from "../components/DownloadBtn";
 import logoIcon from "../assets/images/logo.png";
 import emp1 from "../assets/images/emp-1.png";
 import emp2 from "../assets/images/emp-1.png";
-import emp3 from "../assets/images/emp-3.svg";
-import emp4 from "../assets/images/emp-4.svg";
-import phoneMockup from "../assets/images/iphone-mockup-logo.png";
-import onlineSelling from "../assets/images/online-selling.png";
 import SignUpForm from "../components/SignupForm";
+import About from "../components/About";
 
 const Home = () => {
   const employees = [
@@ -19,16 +17,52 @@ const Home = () => {
       img: emp2,
     },
   ];
-  window.addEventListener(
-    "scroll",
-    () => {
-      document.body.style.setProperty(
-        "--scroll",
-        window.pageYOffset / (document.body.offsetHeight - window.innerHeight)
-      );
-    },
-    false
-  );
+  // window.addEventListener(
+  //   "scroll",
+  //   () => {
+  //     document.body.style.setProperty(
+  //       "--scroll",
+  //       window.pageYOffset / (document.body.offsetHeight - window.innerHeight)
+  //     );
+  //   },
+  //   false
+  // );
+
+  // window.addEventListener(
+  //   "scroll",
+  //   () => {
+  //     const maxScroll = 2000; // Define the maximum scroll position where you want to stop updating --scroll
+  //     const currentScroll = window.pageYOffset;
+
+  //     // If the current scroll position is less than the maximum scroll position, update --scroll
+  //     if (currentScroll < maxScroll) {
+  //       document.body.style.setProperty(
+  //         "--scroll",
+  //         currentScroll / (document.body.offsetHeight - window.innerHeight)
+  //       );
+  //     }
+  //   },
+  //   false
+  // );
+
+  // useEffect(() => {
+  //   const sectionTop = document.querySelector("#team").offsetTop;
+
+  //   const handleScroll = () => {
+  //     const currentScroll = window.pageYOffset;
+
+  //     if (currentScroll <= sectionTop) {
+  //       document.querySelector(".emp-avatar").style.animationPlayState =
+  //         "running";
+  //     }
+  //   };
+
+  //   window.addEventListener("scroll", handleScroll);
+
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
   return (
     <>
@@ -53,58 +87,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section id="about" className="about py-5 px-4 text-light">
-        <div className="text-center flex-row">
-          <h1 className="page-title col-12">About Bubs</h1>
-
-          <div className="flex-row justify-space-between">
-            <p className="col-12 col-lg-6 my-5">
-              Art party roof party butcher single-origin coffee gluten-free
-              offal. Banh mi palo santo mlkshk, yuccie master cleanse normcore
-              williamsburg cred DIY quinoa tousled crucifix bitters cornhole
-              retro. Direct trade whatever fam marfa solarpunk microdosing.
-              Pour-over yuccie taiyaki tattooed, narwhal readymade edison bulb
-              tacos +1 retro umami swag.
-              <br />
-              Polaroid yes plz before they sold out umami. Viral bitters
-              typewriter before they sold out selfies green juice lumbersexual
-              roof party cardigan schlitz you probably haven't heard of them raw
-              denim raclette pabst blackbird spyplane. Unicorn mumblecore art
-              party meggings jean shorts, blackbird spyplane semiotics iceland
-              heirloom hashtag. Bushwick lo-fi fixie, farm-to-table letterpress
-              pop-up hella etsy literally 8-bit leggings kitsch whatever.
-            </p>
-            <img
-              className="grow col-12 col-md-4"
-              src={phoneMockup}
-              alt="bubs app mockup"
-            />
-          </div>
-          <div className="flex-row flex-reverse justify-space-between">
-            <img
-              className="grow col-12 col-md-6"
-              src={onlineSelling}
-              alt="bubs app mockup"
-            />
-            <p className="col-12 col-lg-5 my-5">
-              Art party roof party butcher single-origin coffee gluten-free
-              offal. Banh mi palo santo mlkshk, yuccie master cleanse normcore
-              williamsburg cred DIY quinoa tousled crucifix bitters cornhole
-              retro. Direct trade whatever fam marfa solarpunk microdosing.
-              Pour-over yuccie taiyaki tattooed, narwhal readymade edison bulb
-              tacos +1 retro umami swag.
-              <br />
-              Polaroid yes plz before they sold out umami. Viral bitters
-              typewriter before they sold out selfies green juice lumbersexual
-              roof party cardigan schlitz you probably haven't heard of them raw
-              denim raclette pabst blackbird spyplane. Unicorn mumblecore art
-              party meggings jean shorts, blackbird spyplane semiotics iceland
-              heirloom hashtag. Bushwick lo-fi fixie, farm-to-table letterpress
-              pop-up hella etsy literally 8-bit leggings kitsch whatever.
-            </p>
-          </div>
-        </div>
-      </section>
+      <About />
       <section id="team" className="team py-5 px-4">
         <div className="text-center flex-row">
           <h1 className="page-title text-light col-12">Meet The Team</h1>
@@ -128,7 +111,7 @@ const Home = () => {
             updates and exclusive access to our innovative platform.
           </p>
         </div>
-        <SignUpForm />
+        <SignUpForm className="py-4" />
       </section>
     </>
   );

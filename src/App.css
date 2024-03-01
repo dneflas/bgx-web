@@ -1188,8 +1188,8 @@ nav a:hover {
   animation-play-state: paused;
   animation-delay: calc(var(--scroll) * -1s);
 
-  animation-iteration-count: 1;
-  animation-fill-mode: both;
+  /* animation-iteration-count: 1;
+  animation-fill-mode: both; */
 }
 
 @keyframes rotate {

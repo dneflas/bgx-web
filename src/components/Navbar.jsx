@@ -19,12 +19,12 @@ const Navbar = ({
 
   return (
     <nav
-      className={`flex-row col-6 col-md-6 justify-space-around ${
+      className={`flex-row col-6 col-md-6 justify-space-around text-dark ${
         !mobileScreenWidth && "mt-4"
       }`}
     >
       <a
-        className={`ml-2 my-1 px-2 py-1 text-dark ${
+        className={`ml-2 my-1 px-2 py-1  ${
           currentSection === "about" && "nav-active"
         }`}
         onClick={() => handleLinkClick("about")}
@@ -32,7 +32,7 @@ const Navbar = ({
         About
       </a>
       <a
-        className={`ml-2 my-1 px-2 py-1 text-dark ${
+        className={`ml-2 my-1 px-2 py-1  ${
           currentSection === "team" && "nav-active"
         }`}
         onClick={() => handleLinkClick("team")}
