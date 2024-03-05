@@ -3,10 +3,9 @@ import onlineSelling from "../assets/images/online-selling.png";
 const About = () => {
   return (
     <section id="about" className="about py-5 px-4 text-light">
-      <div className=" flex-row ">
-        <div className="text-center">
+      <div className=" flex-row justify-center ">
+        <div className="text-center col-11 col-sm-8">
           <h1 className="page-title col-12">About Bubs</h1>
-
           <p className="">
             Welcome to Hello-BUBS.com, where our mission is to simplify the
             journey of parenthood, one item at a time. In the whirlwind of
@@ -17,7 +16,7 @@ const About = () => {
           </p>
         </div>
         {/* Vision Section */}
-        <div className="flex-row justify-space-between">
+        <div className="flex-row justify-space-between  align-center">
           <div className="col-12 col-lg-6 my-5">
             <h3>Our Vision</h3>
             <p>
@@ -36,7 +35,7 @@ const About = () => {
           />
         </div>
         {/* Commitment Section */}
-        <div className="flex-row flex-reverse justify-space-between">
+        <div className="flex-row flex-reverse justify-space-between align-center">
           <img
             className="grow col-12 col-md-6"
             src={onlineSelling}
@@ -57,8 +56,8 @@ const About = () => {
         </div>
         {/* Why Hello-BUBS.com? Section */}
         <div className="flex-row justify-center">
-          <div className="col-12">
-            <h3>Why Hello-BUBS.com?</h3>
+          <div className="col-12 my-5">
+            <h3 className="text-center">Why Hello-BUBS.com?</h3>
             <ul>
               <li>
                 <b>Seamless Experience</b>: Our intuitive platform makes it easy
