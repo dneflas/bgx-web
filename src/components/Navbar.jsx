@@ -1,4 +1,5 @@
 import { capitalizeFirstLetter } from "../utils/helpers";
+import { Link } from "react-router-dom";
 
 const Navbar = ({ headerHeight, mobileScreenWidth }) => {
   const navTabs = ["about", "team"];
@@ -21,13 +22,13 @@ const Navbar = ({ headerHeight, mobileScreenWidth }) => {
       } `}
     >
       {navTabs.map((tab) => (
-        <a
-          className="ml-3  my-1 py-1"
+        <Link
           key={tab}
-          onClick={() => handleLinkClick({ tab })}
+          className="ml-3 my-1 py-1"
+          onClick={() => handleLinkClick(tab)}
         >
           {capitalizeFirstLetter(tab)}
-        </a>
+        </Link>
       ))}
     </nav>
   );
