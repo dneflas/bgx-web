@@ -1,11 +1,8 @@
-const Navbar = ({
-  currentSection,
-  setCurrentSection,
-  headerHeight,
-  mobileScreenWidth,
-}) => {
+import { capitalizeFirstLetter } from "../utils/helpers";
+
+const Navbar = ({ headerHeight, mobileScreenWidth }) => {
+  const navTabs = ["about", "team"];
   const handleLinkClick = (id) => {
-    setCurrentSection(id);
     const element = document.getElementById(id);
     if (element) {
       const offset = headerHeight;
@@ -19,26 +16,19 @@ const Navbar = ({
 
   return (
     <nav
-      className={`flex-row col-6 col-md-6 justify-space-around ${
+      className={`flex-row col-7 col-sm-6 justify-space-around text-dark ${
         !mobileScreenWidth && "mt-4"
-      }`}
+      } `}
     >
-      <a
-        className={`ml-2 my-1 px-2 py-1 text-dark ${
-          currentSection === "about" && "nav-active"
-        }`}
-        onClick={() => handleLinkClick("about")}
-      >
-        About
-      </a>
-      <a
-        className={`ml-2 my-1 px-2 py-1 text-dark ${
-          currentSection === "team" && "nav-active"
-        }`}
-        onClick={() => handleLinkClick("team")}
-      >
-        Team
-      </a>
+      {navTabs.map((tab) => (
+        <a
+          className="ml-3  my-1 py-1"
+          key={tab}
+          onClick={() => handleLinkClick({ tab })}
+        >
+          {capitalizeFirstLetter(tab)}
+        </a>
+      ))}
     </nav>
   );
 };

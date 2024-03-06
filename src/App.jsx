@@ -9,20 +9,9 @@ function App() {
     window.location.toString().split("/").length - 1
   ];
 
-  const [currentSection, setCurrentSection] = useState(initialSection);
-  useEffect(() => {
-    if (currentSection === "") {
-      document.title = "Bubs App";
-    } else {
-      document.title = `Bubs App | ${currentSection}`;
-    }
-  });
   return (
     <>
-      <Header
-        currentSection={currentSection}
-        setCurrentSection={setCurrentSection}
-      />
+      <Header />
       <Outlet />
       <Footer />
     </>
