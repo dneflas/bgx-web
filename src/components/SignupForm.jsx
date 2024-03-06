@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { validateEmail, capitalizeFirstLetter } from "../utils/helpers";
 import Loader from "./Loader";
 
 const SignUpForm = () => {
@@ -9,11 +10,6 @@ const SignUpForm = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const [formSubmit, setFormSubmit] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-
-  const validateEmail = (email) => {
-    var re = /^([a-z0-9_.-]+)@([\da-z.-]+)\.([a-z.]{2,6})$/;
-    return re.test(String(email).toLowerCase());
-  };
 
   function handleChange(event) {
     const { name, value } = event.target;

@@ -112,6 +112,11 @@ nav a:hover {
   outline: none;
   background-color: var(--tertiary);
 }
+
+/* styling for small button in header for mobile */
+.btn-small {
+  padding: 0.5rem 2rem 0.4rem;
+}
 .btn-secondary {
   font-size: 1rem;
   font-family: "Urbanist", sans-serif;

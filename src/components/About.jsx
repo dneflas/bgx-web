@@ -62,19 +62,19 @@ const About = () => {
               <li>
                 <b>Seamless Experience</b>: Our intuitive platform makes it easy
                 to find exactly what you need or list items you no longer use.
-                <li>
-                  <b>Quality and Safety First</b>: Every item is vetted to
-                  ensure it meets safety standards, giving you peace of mind.
-                </li>
-                <li>
-                  <b>Community Support</b>: Join a community of like-minded
-                  parents who understand the journey of raising children. -
-                </li>
-                <li>
-                  <b>Sustainability</b>: By trading in our marketplace, you're
-                  making an environmentally friendly choice that supports
-                  sustainable living.
-                </li>
+              </li>
+              <li>
+                <b>Quality and Safety First</b>: Every item is vetted to ensure
+                it meets safety standards, giving you peace of mind.
+              </li>
+              <li>
+                <b>Community Support</b>: Join a community of like-minded
+                parents who understand the journey of raising children. -
+              </li>
+              <li>
+                <b>Sustainability</b>: By trading in our marketplace, you're
+                making an environmentally friendly choice that supports
+                sustainable living.
               </li>
             </ul>
           </div>

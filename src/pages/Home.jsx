@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import DownloadBtn from "../components/DownloadBtn";
 import logoIcon from "../assets/images/logo.png";
 import emp1 from "../assets/images/emp-1.png";
@@ -108,7 +108,7 @@ const Home = () => {
       {/* Sign Up Section */}
       <section id="signup" className="signup py-5">
         <div className="text-center flex-row justify-center text-light">
-          <h1 className="page-title col-12">Join Our Community</h1>
+          <h1 className="page-title col-11">Join Our Community</h1>
           <p className="col-10">
             Hello-BUBS.com is more than just a marketplace; it's a community of
             parents navigating the beautiful, albeit sometimes challenging,

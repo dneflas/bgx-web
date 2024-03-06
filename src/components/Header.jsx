@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 import DownloadBtn from "./DownloadBtn";
 import { Link } from "react-router-dom";
 
-const Header = ({ currentSection, setCurrentSection }) => {
+const Header = () => {
   const [headerHeight, setHeaderHeight] = useState(0);
   const [mobileScreenWidth, setMobileScreenWidth] = useState(false);
   const elementRef = useRef(null);
@@ -34,12 +34,12 @@ const Header = ({ currentSection, setCurrentSection }) => {
 
   return (
     <header
-      className=" flex-row justify-space-between align-center pt-3"
+      className="flex-row justify-space-between align-center pt-3 "
       ref={elementRef}
     >
       <div
-        className={`flex-row col-12 col-sm-9 ${
-          mobileScreenWidth && "justify-space-around"
+        className={`flex-row col-9 col-sm-9 ${
+          mobileScreenWidth && "justify-flex-start"
         }`}
       >
         <Link to="/bgx-web/" className="col-2">
@@ -50,14 +50,12 @@ const Header = ({ currentSection, setCurrentSection }) => {
           />
         </Link>
         <Navbar
-          currentSection={currentSection}
-          setCurrentSection={setCurrentSection}
           headerHeight={headerHeight}
           mobileScreenWidth={mobileScreenWidth}
         />
       </div>
-      <div className="flex-row col-12 col-sm-3 justify-center">
-        <DownloadBtn className="col-12" />
+      <div className="flex-row col-2 col-sm-3 justify-center">
+        <DownloadBtn className="col-12" mobileScreenWidth={mobileScreenWidth} />
       </div>
     </header>
   );
