@@ -1,4 +1,4 @@
-import circleDownIcon from "../assets/images/circle-down-solid.svg";
+import paperAirplaneIcon from "../assets/images/paper-plane-regular.svg";
 
 const DownloadBtn = ({ mobileScreenWidth }) => {
   return (
@@ -6,7 +6,7 @@ const DownloadBtn = ({ mobileScreenWidth }) => {
       <button className={` btn ${mobileScreenWidth && "btn-small"}`}>
         {mobileScreenWidth ? (
           <img
-            src={circleDownIcon}
+            src={paperAirplaneIcon}
             alt="arrow down inside circle icon"
             width="15px"
           />

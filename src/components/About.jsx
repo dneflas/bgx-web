@@ -65,7 +65,7 @@ const About = () => {
               </li>
               <li>
                 <b>Community Support</b>: Join a community of like-minded
-                parents who understand the journey of raising children. -
+                parents who understand the journey of raising children.
               </li>
               <li>
                 <b>Sustainability</b>: By trading in our marketplace, you're

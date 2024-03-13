@@ -117,8 +117,12 @@ const Home = () => {
             children.
             <br />
             <br />
-            Be the first to know when our beta launches! Sign up now to receive
-            updates and exclusive access to our innovative platform.
+            Discover the joy of finding the perfect item that brings a smile to
+            your child's face or passing on pre-loved gear to a new home. Let's
+            make parenting a little easier, together.
+            <br />
+            <br />
+            Welcome to the Hello-BUBS family. Here's to growing together!
           </p>
         </div>
         <SignUpForm className="py-4" />
