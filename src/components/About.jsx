@@ -64,12 +64,8 @@ const About = () => {
                 to find exactly what you need or list items you no longer use.
               </li>
               <li>
-                <b>Quality and Safety First</b>: Every item is vetted to ensure
-                it meets safety standards, giving you peace of mind.
-              </li>
-              <li>
                 <b>Community Support</b>: Join a community of like-minded
-                parents who understand the journey of raising children. -
+                parents who understand the journey of raising children.
               </li>
               <li>
                 <b>Sustainability</b>: By trading in our marketplace, you're
